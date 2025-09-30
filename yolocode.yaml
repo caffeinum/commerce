@@ -1,0 +1,21 @@
+tmux:
+  session: puppy-sneakers
+  window: commerce
+
+services:
+  frontend:
+    command: pnpm dev
+    setup: pnpm install
+    port: 3000
+  
+  build:
+    command: pnpm build
+    setup: pnpm install
+  
+  typecheck:
+    command: pnpm run prettier:check
+    setup: pnpm install
+  
+  format:
+    command: pnpm run prettier
+    setup: pnpm install
